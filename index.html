@@ -147,10 +147,10 @@
     );
 
     const StarRating = () => (
-      <div className="flex items-center gap-1 mb-5">
+      <div className="flex items-center gap-1 mb-3">
         {[1,2,3,4,5].map((star) => (
           <div key={star} className="text-red-500 text-glow-red">
-            <Star size={14} fill="currentColor" strokeWidth={0} />
+            <Star size={12} fill="currentColor" strokeWidth={0} />
           </div>
         ))}
       </div>
@@ -258,19 +258,20 @@
       { id: 'blog', label: 'Blogs', icon: Zap },
     ];
 
+    /* ------------------------------ HERO (RESIZED) ------------------------------ */
     const Hero = ({ setActiveTab }) => (
-      <div className="min-h-screen flex flex-col justify-start px-6 md:px-16 lg:px-20 pt-24 md:pt-24 pb-20 md:pb-24 relative">
-        <div className="absolute top-0 right-0 w-[760px] h-[760px] bg-red-600/8 rounded-full blur-[180px] pointer-events-none"></div>
+      <div className="min-h-[100svh] flex flex-col justify-start px-6 md:px-16 lg:px-20 pt-16 md:pt-20 pb-10 md:pb-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-600/8 rounded-full blur-[180px] pointer-events-none"></div>
 
         <ScrollReveal>
-          <div className="flex items-center gap-3 text-red-500 font-bold tracking-[0.2em] mb-4 md:mb-5 text-[11px] md:text-xs uppercase">
-            <Zap size={16} fill="currentColor" />
+          <div className="flex items-center gap-3 text-red-500 font-bold tracking-[0.2em] mb-3 md:mb-4 text-[10px] md:text-[11px] uppercase">
+            <Zap size={14} fill="currentColor" />
             <span>HYPERACCELERATIONIST. CONTRARIAN. RADICAL CENTRIST.</span>
           </div>
 
           <h1
-            className="brand-font font-black leading-[0.92] mb-8 md:mb-10 uppercase tracking-tight text-white break-words"
-            style={{ fontSize: "clamp(3.1rem, 6.8vw, 6.1rem)" }}
+            className="brand-font font-black leading-[0.95] mb-5 md:mb-6 uppercase tracking-tight text-white break-words"
+            style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
           >
             ACCELERATE <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-red-200 via-red-500 to-red-700 opacity-100">
@@ -279,10 +280,10 @@
           </h1>
         </ScrollReveal>
 
-        <ScrollReveal delay="100ms" className="mb-14 md:mb-20 max-w-3xl">
+        <ScrollReveal delay="100ms" className="mb-8 md:mb-12 max-w-2xl">
           <p
             className="font-light text-white/85 leading-snug"
-            style={{ fontSize: "clamp(1.15rem, 2.1vw, 2.15rem)" }}
+            style={{ fontSize: "clamp(1rem, 1.5vw, 1.25rem)" }}
           >
             I’m <span className="text-white font-bold">Hamad Almheiri</span>.
             <br />
@@ -292,81 +293,81 @@
           </p>
         </ScrollReveal>
 
-        <ScrollReveal delay="200ms" className="mb-28 md:mb-32 w-full flex flex-col items-start relative">
-          <div className="absolute -left-24 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-red-900/16 rounded-full blur-[140px] pointer-events-none"></div>
+        <ScrollReveal delay="200ms" className="mb-16 md:mb-20 w-full flex flex-col items-start relative">
+          <div className="absolute -left-24 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-red-900/16 rounded-full blur-[140px] pointer-events-none"></div>
 
           <div className="flex items-center gap-4 mb-2 opacity-70">
-            <span className="font-mono text-red-500 tracking-widest text-[11px] uppercase">MY STARTUP</span>
-            <span className="w-12 h-[1px] bg-red-500"></span>
+            <span className="font-mono text-red-500 tracking-widest text-[10px] uppercase">MY STARTUP</span>
+            <span className="w-10 h-[1px] bg-red-500"></span>
           </div>
 
           <h3
-            className="brand-font font-black leading-none mb-7 text-red-400 text-glow-red"
-            style={{ fontSize: "clamp(2.2rem, 4.8vw, 4.9rem)" }}
+            className="brand-font font-black leading-none mb-5 text-red-400 text-glow-red"
+            style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
           >
             BRAIN<br />SCROLLER
           </h3>
 
-          <div className="md:ml-20 max-w-3xl border-l border-red-500/30 pl-7 md:pl-10 py-2">
-            <p className="text-base md:text-lg text-white/75 leading-relaxed mb-5">
+          <div className="md:ml-20 max-w-2xl border-l border-red-500/30 pl-6 md:pl-8 py-2">
+            <p className="text-sm md:text-base text-white/75 leading-relaxed mb-4">
               <span className="text-white font-bold">The Anti-Doomscrolling Engine.</span>
               <br />
               BrainScroller hijacks the scroll and redirects it into learning. Same reflex. Different outcome.
             </p>
             <button
               onClick={() => setActiveTab('company')}
-              className="text-red-500 font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 group text-sm"
+              className="text-red-500 font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 group text-xs md:text-sm"
             >
               Explore The Engine <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </button>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay="100ms" className="mb-28 md:mb-36 w-full flex flex-col items-end text-right relative">
-          <div className="absolute -right-24 top-1/2 -translate-y-1/2 w-[640px] h-[640px] bg-red-600/5 rounded-full blur-[170px] pointer-events-none"></div>
+        <ScrollReveal delay="100ms" className="mb-16 md:mb-20 w-full flex flex-col items-end text-right relative">
+          <div className="absolute -right-24 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/5 rounded-full blur-[170px] pointer-events-none"></div>
 
           <div className="flex items-center gap-4 mb-4 justify-end opacity-55">
-            <span className="w-20 h-[1px] bg-red-500"></span>
-            <span className="font-mono text-red-500 tracking-widest text-[11px] uppercase">MY PODCAST</span>
+            <span className="w-16 h-[1px] bg-red-500"></span>
+            <span className="font-mono text-red-500 tracking-widest text-[10px] uppercase">MY PODCAST</span>
           </div>
 
           <h3
-            className="brand-font font-black leading-none mb-7 text-white"
-            style={{ fontSize: "clamp(2.05rem, 4.6vw, 4.6rem)" }}
+            className="brand-font font-black leading-none mb-5 text-white"
+            style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
           >
             THE<br />
             <span className="text-red-400 text-glow-red">ACCELERATED</span><br />
             MIND
           </h3>
 
-          <div className="max-w-3xl">
-            <p className="text-base md:text-lg text-white/75 leading-relaxed mb-7">
+          <div className="max-w-2xl">
+            <p className="text-sm md:text-base text-white/75 leading-relaxed mb-5">
               A late-night transmission about acceleration versus stagnation. Culture, incentives, power, and the brutal mechanics of what makes a civilization compound.
               Less therapy-talk. More signal. Built for people who want the future to arrive on purpose.
             </p>
             <button
               onClick={() => setActiveTab('youtube')}
-              className="inline-flex items-center gap-3 font-bold text-red-500 hover:text-white transition-colors group text-sm md:text-base"
+              className="inline-flex items-center gap-3 font-bold text-red-500 hover:text-white transition-colors group text-xs md:text-sm"
             >
               WATCH THE SIGNAL <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </button>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="my-16 md:my-20 flex flex-col items-center text-center">
-          <div className="w-[1px] h-16 bg-gradient-to-b from-transparent to-red-500 mb-7"></div>
+        <ScrollReveal className="my-10 md:my-14 flex flex-col items-center text-center">
+          <div className="w-[1px] h-10 bg-gradient-to-b from-transparent to-red-500 mb-5"></div>
 
-          <div className="quote-safe max-w-5xl">
+          <div className="quote-safe max-w-4xl">
             <h2
-              className="brand-font font-bold leading-tight text-white mb-7"
-              style={{ fontSize: "clamp(1.7rem, 3.0vw, 3.1rem)" }}
+              className="brand-font font-bold leading-tight text-white mb-5"
+              style={{ fontSize: "clamp(1.2rem, 2vw, 2rem)" }}
             >
               “The most contrarian thing of all is not to oppose the crowd but to think for yourself.”
             </h2>
-            <p className="text-white/55 font-mono uppercase tracking-[0.28em] text-[11px]">— Peter Thiel</p>
+            <p className="text-white/55 font-mono uppercase tracking-[0.28em] text-[10px]">— Peter Thiel</p>
           </div>
 
-          <div className="w-[1px] h-16 bg-gradient-to-b from-red-500 to-transparent mt-7"></div>
+          <div className="w-[1px] h-10 bg-gradient-to-b from-red-500 to-transparent mt-5"></div>
         </ScrollReveal>
       </div>
     );
@@ -396,39 +397,42 @@
         { quote: "The app is structured and informative. It’s easy to click on interesting topics and learn more. The UI is also fun and engaging!", author: "philsamar", role: "Curious mind", location: "United States", source: "App Store" },
         { quote: "IN LOVE WITH THIS APP. Absolutely in love.", author: "TheHalMan", role: "Early iOS user", location: "Canada", source: "App Store" },
         { quote: "Never seen an app like this before — it feels so creative and different.", author: "Julian", role: "Early user", location: "", source: "App Store" },
+        { quote: "It’s so easy to fall into the doomscrolling trap, but this app takes the whole dopamine hit reward system used by social media and apps like Duolingo and teaches you genuinely useful information. It has a variety of sections, like History, Investing, Psychology, etc. and it gives you super easy breakdowns on big topics. Already feel smarter lol", author: "naomi…", role: "iOS user", location: "", source: "App Store" },
+        { quote: "just perfect and cool!", author: "edward_…", role: "iOS user", location: "", source: "App Store" },
+        { quote: "Amazing app so far, extremely informative, and a great time spender. Can't wait to see where it goes.", author: "FatherVito", role: "iOS user", location: "", source: "App Store" },
         { quote: "“BrainScrolling” is officially in my dictionary.", author: "Anshul", role: "Daily scroller turned learner", location: "", source: "Word-of-mouth" },
       ];
 
       return (
-        <div className="min-h-screen pt-28 md:pt-32 px-6 md:px-16 lg:px-20 pb-20">
-          <div className="flex flex-col gap-4 md:gap-5 mb-16 md:mb-18 fade-enter-active items-center text-center">
+        <div className="min-h-screen pt-20 md:pt-24 px-6 md:px-16 lg:px-20 pb-16">
+          <div className="flex flex-col gap-3 md:gap-4 mb-12 md:mb-14 fade-enter-active items-center text-center">
             <h2 className="brand-font font-black text-white/90 leading-[0.95] uppercase"
-              style={{ fontSize: "clamp(2.2rem, 4.4vw, 4.4rem)" }}
+              style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
             >
               BrainScroller: <br />
               <span className="text-red-500">The Cure to DoomScrolling.</span>
             </h2>
 
             <div className="flex items-center gap-2">
-              <span className="text-red-500 font-mono text-lg animate-pulse">_</span>
-              <p className="text-lg md:text-xl text-white font-bold italic tracking-wide">
+              <span className="text-red-500 font-mono text-base animate-pulse">_</span>
+              <p className="text-base md:text-lg text-white font-bold italic tracking-wide">
                 Start BrainScrolling<span className="animate-[blink_1s_infinite]">...</span>
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-24 md:mb-28 border-y border-white/10 py-10 fade-enter-active">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-16 md:mb-20 border-y border-white/10 py-8 fade-enter-active">
             <div>
-              <p className="text-white/55 font-mono text-[10px] tracking-widest mb-6">ACTIVE DEPLOYMENTS</p>
-              <div className="space-y-4">
+              <p className="text-white/55 font-mono text-[10px] tracking-widest mb-4">ACTIVE DEPLOYMENTS</p>
+              <div className="space-y-3">
                 <a
                   href="https://apps.apple.com/app/id6754678719"
                   target="_blank"
-                  className="group flex items-center gap-4 text-xl md:text-2xl font-bold text-white hover:text-red-400 transition-colors"
+                  className="group flex items-center gap-3 text-lg md:text-xl font-bold text-white hover:text-red-400 transition-colors"
                 >
-                  <Apple size={30} />
+                  <Apple size={24} />
                   <span>iOS App Store</span>
-                  <div className="whitespace-nowrap px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-[10px] font-mono uppercase tracking-wide">
+                  <div className="whitespace-nowrap px-2 py-0.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-[9px] font-mono uppercase tracking-wide">
                     LIVE
                   </div>
                 </a>
@@ -436,11 +440,11 @@
                 <a
                   href="https://play.google.com/store/apps/details?id=com.yourcompany.app59v5"
                   target="_blank"
-                  className="group flex items-center gap-4 text-xl md:text-2xl font-bold text-white hover:text-red-400 transition-colors"
+                  className="group flex items-center gap-3 text-lg md:text-xl font-bold text-white hover:text-red-400 transition-colors"
                 >
-                  <Smartphone size={30} />
+                  <Smartphone size={24} />
                   <span>Android Play Store</span>
-                  <div className="whitespace-nowrap px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-[10px] font-mono uppercase tracking-wide">
+                  <div className="whitespace-nowrap px-2 py-0.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-[9px] font-mono uppercase tracking-wide">
                     LIVE
                   </div>
                 </a>
@@ -448,9 +452,9 @@
                 <a
                   href="https://www.brainscroller.com"
                   target="_blank"
-                  className="group flex items-center gap-4 text-xl md:text-2xl font-bold text-white hover:text-red-400 transition-colors"
+                  className="group flex items-center gap-3 text-lg md:text-xl font-bold text-white hover:text-red-400 transition-colors"
                 >
-                  <Globe size={30} />
+                  <Globe size={24} />
                   <span>Landing Page</span>
                 </a>
               </div>
@@ -460,23 +464,26 @@
               <p className="text-white/55 font-mono text-[10px] tracking-widest mb-2">LIVE NEURAL NODES</p>
               <div className="flex items-baseline gap-2">
                 <span className="font-black text-white tabular-nums tracking-tight"
-                  style={{ fontSize: "clamp(2.8rem, 5.2vw, 4.3rem)" }}
+                  style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
                 >
                   {userCount.toLocaleString()}
                 </span>
-                <span className="text-red-500 font-bold animate-pulse text-lg">●</span>
+                <span className="text-red-500 font-bold animate-pulse text-base">●</span>
               </div>
-              <p className="text-white/60 text-sm mt-2">Active learners replacing the scroll right now.</p>
+              <p className="text-white/60 text-sm mt-1">Active learners replacing the scroll right now.</p>
+              <p className="text-white/45 text-xs mt-1">
+                Users already coming in from <span className="text-white/70 font-semibold">100+ countries</span>.
+              </p>
             </div>
           </div>
 
-          <div className="mb-24 md:mb-28 fade-enter-active">
-            <div className="flex items-center gap-4 mb-10">
-              <span className="w-12 h-[1px] bg-red-500"></span>
-              <span className="font-mono text-red-500 tracking-widest text-[11px] uppercase">SYSTEM ARCHITECTURE</span>
+          <div className="mb-16 md:mb-20 fade-enter-active">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="w-8 h-[1px] bg-red-500"></span>
+              <span className="font-mono text-red-500 tracking-widest text-[10px] uppercase">SYSTEM ARCHITECTURE</span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
               {[
                 { title: "Replace The Feed", desc: "Keep the reflex. Change the input. Swap dopamine hits for insight sparks." },
                 { title: "Daily Global Briefing", desc: "Stay aware. Sources distilled into a fast, readable stream." },
@@ -484,45 +491,45 @@
               ].map((step, i) => (
                 <div
                   key={i}
-                  className="relative p-7 md:p-8 border border-white/10 bg-white/5 rounded-2xl hover:border-red-500/50 transition-all duration-500 hover:-translate-y-1.5 group"
+                  className="relative p-6 md:p-7 border border-white/10 bg-white/5 rounded-xl hover:border-red-500/50 transition-all duration-500 hover:-translate-y-1 group"
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <span className="text-5xl font-black text-white/10 mb-4 block group-hover:text-red-500/20 transition-colors">
+                  <span className="text-4xl font-black text-white/10 mb-3 block group-hover:text-red-500/20 transition-colors">
                     0{i+1}
                   </span>
-                  <h4 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors">
+                  <h4 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-red-500 transition-colors">
                     {step.title}
                   </h4>
-                  <p className="text-white/75 leading-relaxed text-sm md:text-base">{step.desc}</p>
+                  <p className="text-white/75 leading-relaxed text-sm">{step.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="mb-28 md:mb-32 fade-enter-active overflow-hidden w-full">
-            <div className="text-center mb-14">
-              <p className="text-red-500 font-mono text-[10px] tracking-widest mb-4 uppercase">EARLY SIGNAL INTERCEPTS</p>
-              <h3 className="text-3xl md:text-4xl font-bold text-white">People are already BrainScrolling.</h3>
+          <div className="mb-20 md:mb-24 fade-enter-active overflow-hidden w-full">
+            <div className="text-center mb-10">
+              <p className="text-red-500 font-mono text-[10px] tracking-widest mb-3 uppercase">EARLY SIGNAL INTERCEPTS</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white">People are already BrainScrolling.</h3>
               <p className="text-white/60 text-sm mt-2">
                 No paid quotes. Just real words from the first wave of users.
               </p>
             </div>
 
             <div className="relative w-full">
-              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#050505] to-transparent z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#050505] to-transparent z-10"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#050505] to-transparent z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#050505] to-transparent z-10"></div>
 
-              <div className="flex gap-6 animate-marquee whitespace-nowrap mb-6 w-max hover:[animation-play-state:paused]">
+              <div className="flex gap-4 animate-marquee whitespace-nowrap mb-4 w-max hover:[animation-play-state:paused]">
                 {[...reviews, ...reviews].map((review, i) => (
                   <div
                     key={`r1-${i}`}
-                    className="w-[360px] md:w-[400px] p-6 border border-white/10 bg-white/5 rounded-xl hover:border-red-500/50 transition-colors whitespace-normal inline-block"
+                    className="w-[300px] md:w-[340px] p-5 border border-white/10 bg-white/5 rounded-xl hover:border-red-500/50 transition-colors whitespace-normal inline-block"
                   >
                     <StarRating />
-                    <p className="text-[10px] font-mono text-red-500/80 mb-2 tracking-widest uppercase">
+                    <p className="text-[9px] font-mono text-red-500/80 mb-2 tracking-widest uppercase">
                       {review.source}
                     </p>
-                    <p className="text-base md:text-lg text-gray-200 italic mb-4 leading-relaxed">
+                    <p className="text-sm md:text-base text-gray-200 italic mb-3 leading-relaxed">
                       "{review.quote}"
                     </p>
                     <div className="flex items-center gap-2">
@@ -534,17 +541,17 @@
                 ))}
               </div>
 
-              <div className="flex gap-6 animate-marquee-reverse whitespace-nowrap w-max hover:[animation-play-state:paused]">
+              <div className="flex gap-4 animate-marquee-reverse whitespace-nowrap w-max hover:[animation-play-state:paused]">
                 {[...reviews.slice().reverse(), ...reviews].map((review, i) => (
                   <div
                     key={`r2-${i}`}
-                    className="w-[360px] md:w-[400px] p-6 border border-white/10 bg-white/5 rounded-xl hover:border-red-500/50 transition-colors whitespace-normal inline-block"
+                    className="w-[300px] md:w-[340px] p-5 border border-white/10 bg-white/5 rounded-xl hover:border-red-500/50 transition-colors whitespace-normal inline-block"
                   >
                     <StarRating />
-                    <p className="text-[10px] font-mono text-red-500/80 mb-2 tracking-widest uppercase">
+                    <p className="text-[9px] font-mono text-red-500/80 mb-2 tracking-widest uppercase">
                       {review.source}
                     </p>
-                    <p className="text-base md:text-lg text-gray-200 italic mb-4 leading-relaxed">
+                    <p className="text-sm md:text-base text-gray-200 italic mb-3 leading-relaxed">
                       "{review.quote}"
                     </p>
                     <div className="flex items-center gap-2">
@@ -558,17 +565,17 @@
             </div>
           </div>
 
-          <div className="relative max-w-4xl mx-auto mt-24 md:mt-28 flex flex-col items-center">
-            <ScrollReveal className="text-center w-full mb-14">
-              <h3 className="text-2xl md:text-3xl font-bold text-white flex items-center justify-center gap-3">
-                <Clock className="text-red-500" /> SEQUENCE OF EVENTS
+          <div className="relative max-w-3xl mx-auto mt-16 md:mt-20 flex flex-col items-center">
+            <ScrollReveal className="text-center w-full mb-10">
+              <h3 className="text-xl md:text-2xl font-bold text-white flex items-center justify-center gap-3">
+                <Clock className="text-red-500" size={20} /> SEQUENCE OF EVENTS
               </h3>
             </ScrollReveal>
 
             <div className="relative w-full">
-              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[2px] bg-white/10"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[1px] bg-white/10"></div>
 
-              <div className="space-y-20 md:space-y-24">
+              <div className="space-y-16 md:space-y-20">
                 {timelineData.map((item, i) => (
                   <ScrollReveal
                     key={i}
@@ -579,31 +586,31 @@
                   >
                     <div className="w-5/12"></div>
 
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-transparent border-2 border-red-500 shadow-[0_0_14px_rgba(239,68,68,0.75)]"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full bg-transparent border-2 border-red-500 shadow-[0_0_12px_rgba(239,68,68,0.75)]"></div>
 
-                    <div className={`relative w-5/12 ${i % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                      <span className="font-mono text-red-500 text-xs tracking-widest block mb-2">
+                    <div className={`relative w-5/12 ${i % 2 === 0 ? 'text-right pr-6' : 'text-left pl-6'}`}>
+                      <span className="font-mono text-red-500 text-[10px] tracking-widest block mb-1">
                         {item.date}
                       </span>
-                      <h4 className="text-xl md:text-2xl font-bold text-white mb-2">{item.title}</h4>
-                      <p className="text-white/60 leading-relaxed text-sm md:text-base">{item.desc}</p>
+                      <h4 className="text-lg md:text-xl font-bold text-white mb-1">{item.title}</h4>
+                      <p className="text-white/60 leading-relaxed text-xs md:text-sm">{item.desc}</p>
                     </div>
                   </ScrollReveal>
                 ))}
               </div>
 
-              <ScrollReveal delay="700ms" className="flex justify-center pt-10 relative z-10">
+              <ScrollReveal delay="700ms" className="flex justify-center pt-8 relative z-10">
                 <div className="bg-black p-2 rounded-full border border-white/10">
-                  <ArrowDown className="text-red-500 animate-bounce" size={22} />
+                  <ArrowDown className="text-red-500 animate-bounce" size={18} />
                 </div>
               </ScrollReveal>
             </div>
 
-            <ScrollReveal delay="850ms" className="mt-12 flex justify-center">
+            <ScrollReveal delay="850ms" className="mt-10 flex justify-center">
               <a
                 href="https://www.brainscroller.com"
                 target="_blank"
-                className="px-9 py-3.5 rounded-full border border-red-500/60 bg-black/70 text-red-300 font-bold tracking-[0.25em] uppercase text-[11px] md:text-xs hover:bg-red-500 hover:text-black transition-all hover:-translate-y-1"
+                className="px-8 py-3 rounded-full border border-red-500/60 bg-black/70 text-red-300 font-bold tracking-[0.25em] uppercase text-[10px] md:text-xs hover:bg-red-500 hover:text-black transition-all hover:-translate-y-1"
               >
                 Follow our journey
               </a>
@@ -668,13 +675,13 @@
 
       if (selectedPost) {
         return (
-          <div className="min-h-screen pt-28 md:pt-32 px-6 md:px-16 lg:px-20 pb-28">
-            <div className="flex items-center justify-between mb-9">
+          <div className="min-h-screen pt-20 md:pt-24 px-6 md:px-16 lg:px-20 pb-20">
+            <div className="flex items-center justify-between mb-7">
               <button
                 onClick={() => setSelectedPostId(null)}
                 className="flex items-center gap-2 text-[10px] font-mono tracking-[0.2em] uppercase text-white/60 hover:text-red-400"
               >
-                <ArrowLeft size={18} />
+                <ArrowLeft size={16} />
                 <span>BACK TO ALL VIEWS</span>
               </button>
               <span className="text-[10px] font-mono text-red-500/70 tracking-[0.3em] uppercase">
@@ -682,16 +689,16 @@
               </span>
             </div>
 
-            <div className="relative overflow-hidden border border-white/10 rounded-3xl bg-black/50 backdrop-blur-xl px-6 md:px-12 py-10 md:py-14">
+            <div className="relative overflow-hidden border border-white/10 rounded-2xl bg-black/50 backdrop-blur-xl px-6 md:px-10 py-8 md:py-10">
               <div className="pointer-events-none absolute inset-0 opacity-40">
-                <div className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-red-500/10 blur-3xl"></div>
-                <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-red-500/10 blur-3xl"></div>
+                <div className="absolute -top-40 -left-40 w-60 h-60 rounded-full bg-red-500/10 blur-3xl"></div>
+                <div className="absolute -bottom-40 -right-40 w-72 h-72 rounded-full bg-red-500/10 blur-3xl"></div>
                 <div className="absolute inset-y-0 left-1/2 w-px bg-gradient-to-b from-transparent via-red-500/40 to-transparent"></div>
               </div>
 
-              <div className="relative z-10 max-w-4xl">
-                <div className="flex flex-wrap items-center gap-3 mb-6 text-[10px] font-mono uppercase tracking-[0.2em]">
-                  <span className="px-3 py-1 rounded-full border border-red-500/40 bg-red-500/5 text-red-400">
+              <div className="relative z-10 max-w-3xl">
+                <div className="flex flex-wrap items-center gap-3 mb-5 text-[10px] font-mono uppercase tracking-[0.2em]">
+                  <span className="px-2 py-0.5 rounded-full border border-red-500/40 bg-red-500/5 text-red-400">
                     {selectedPost.category}
                   </span>
                   <span className="text-white/60">STATUS: {selectedPost.status}</span>
@@ -699,19 +706,19 @@
                   <span className="text-white/60">{selectedPost.readingTime}</span>
                 </div>
 
-                <h1 className="brand-font font-black leading-tight mb-6" style={{ fontSize: "clamp(2.1rem, 4.6vw, 4.3rem)" }}>
+                <h1 className="brand-font font-black leading-tight mb-5" style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}>
                   <span className="bg-gradient-to-r from-red-200 via-red-500 to-red-700 bg-clip-text text-transparent">
                     {selectedPost.title}
                   </span>
                 </h1>
 
                 {selectedPost.tagline && (
-                  <p className="text-base md:text-lg text-white/75 mb-9 max-w-2xl">
+                  <p className="text-sm md:text-base text-white/75 mb-8 max-w-2xl">
                     {selectedPost.tagline}
                   </p>
                 )}
 
-                <div className="space-y-6 text-gray-300 text-base md:text-lg leading-relaxed">
+                <div className="space-y-5 text-gray-300 text-sm md:text-base leading-relaxed">
                   {selectedPost.content.map((para, idx) => (
                     <p key={idx}>{para}</p>
                   ))}
@@ -723,19 +730,19 @@
       }
 
       return (
-        <div className="min-h-screen pt-28 md:pt-32 px-6 md:px-16 lg:px-20 pb-20">
-          <div className="flex justify-between items-end mb-14 fade-enter-active">
+        <div className="min-h-screen pt-20 md:pt-24 px-6 md:px-16 lg:px-20 pb-16">
+          <div className="flex justify-between items-end mb-10 fade-enter-active">
             <div>
-              <p className="text-red-500 font-mono tracking-widest mb-2 text-[11px]">// CONTRARIAN TAKES</p>
-              <h2 className="brand-font font-black text-white" style={{ fontSize: "clamp(2.2rem, 5.0vw, 4.9rem)" }}>MY VIEWS</h2>
+              <p className="text-red-500 font-mono tracking-widest mb-2 text-[10px]">// CONTRARIAN TAKES</p>
+              <h2 className="brand-font font-black text-white" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>MY VIEWS</h2>
             </div>
-            <div className="ml-8 max-w-xs text-right text-[10px] font-mono text-white/60 tracking-[0.25em] uppercase">
+            <div className="ml-8 max-w-xs text-right text-[9px] font-mono text-white/60 tracking-[0.25em] uppercase">
               <span>ALL ESSAYS WRITTEN BY HAMAD</span><br />
               <span className="text-red-500">NO GUEST POSTS.</span>
             </div>
           </div>
 
-          <div className="space-y-14">
+          <div className="space-y-10">
             {posts.map((post, i) => (
               <button
                 key={post.id}
@@ -743,23 +750,23 @@
                 className="group w-full text-left fade-enter-active relative"
                 style={{ animationDelay: `${i * 90}ms` }}
               >
-                <div className="absolute -left-10 top-0 bottom-0 w-1 bg-red-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
-                <div className="flex flex-col gap-4">
-                  <div className="flex items-center gap-4 flex-wrap">
-                    <span className="text-[10px] font-bold px-3 py-1 bg-red-500/10 text-red-500 border border-red-500/20 font-mono uppercase">
+                <div className="absolute -left-8 top-0 bottom-0 w-0.5 bg-red-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="text-[9px] font-bold px-2 py-0.5 bg-red-500/10 text-red-500 border border-red-500/20 font-mono uppercase">
                       {post.category}
                     </span>
-                    <span className="text-white/50 font-mono text-[10px] tracking-widest uppercase">
+                    <span className="text-white/50 font-mono text-[9px] tracking-widest uppercase">
                       STATUS: {post.status}
                     </span>
-                    <span className="text-white/50 font-mono text-[10px] tracking-widest uppercase">
+                    <span className="text-white/50 font-mono text-[9px] tracking-widest uppercase">
                       • {post.readingTime}
                     </span>
                   </div>
-                  <h3 className="text-2xl md:text-4xl font-bold text-white group-hover:text-red-500 transition-colors uppercase">
+                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-red-500 transition-colors uppercase">
                     {post.title}
                   </h3>
-                  <p className="text-white/75 max-w-3xl text-base md:text-lg leading-relaxed">
+                  <p className="text-white/75 max-w-2xl text-sm md:text-base leading-relaxed">
                     {post.excerpt}
                   </p>
                 </div>
@@ -831,28 +838,28 @@
       };
 
       return (
-        <div className="min-h-screen pt-28 md:pt-32 px-6 md:px-16 lg:px-20">
-          <div className="flex items-center gap-6 mb-14 md:mb-18 fade-enter-active">
-            <div className="w-14 h-14 border border-red-500/50 flex items-center justify-center rounded-full">
-              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_red]"></div>
+        <div className="min-h-screen pt-20 md:pt-24 px-6 md:px-16 lg:px-20">
+          <div className="flex items-center gap-5 mb-10 md:mb-14 fade-enter-active">
+            <div className="w-12 h-12 border border-red-500/50 flex items-center justify-center rounded-full">
+              <div className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse shadow-[0_0_8px_red]"></div>
             </div>
             <div>
-              <p className="text-white/60 font-mono text-[11px] tracking-widest">INCOMING STREAM</p>
-              <h2 className="brand-font font-black" style={{ fontSize: "clamp(2.2rem, 5vw, 4.9rem)" }}>VIDEOS</h2>
-              <p className="text-white/60 text-sm mt-1">The Accelerated Mind</p>
+              <p className="text-white/60 font-mono text-[10px] tracking-widest">INCOMING STREAM</p>
+              <h2 className="brand-font font-black" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>VIDEOS</h2>
+              <p className="text-white/60 text-xs mt-1">The Accelerated Mind</p>
             </div>
           </div>
 
           {loading && (
-            <p className="text-white/60 font-mono text-sm">Booting YouTube feed…</p>
+            <p className="text-white/60 font-mono text-xs">Booting YouTube feed…</p>
           )}
 
           {error && !loading && (
-            <p className="text-red-500 font-mono text-sm">{error}</p>
+            <p className="text-red-500 font-mono text-xs">{error}</p>
           )}
 
           {!loading && !error && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-9">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {videos.map((item, i) => (
                 <a
                   key={item.id}
@@ -861,7 +868,7 @@
                   className="group cursor-pointer fade-enter-active"
                   style={{ animationDelay: `${i * 90}ms` }}
                 >
-                  <div className="aspect-video bg-neutral-900 relative mb-5 overflow-hidden rounded-xl border border-white/10">
+                  <div className="aspect-video bg-neutral-900 relative mb-4 overflow-hidden rounded-lg border border-white/10">
                     {item.thumbnail && (
                       <img
                         src={item.thumbnail}
@@ -871,15 +878,15 @@
                     )}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/60"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm group-hover:border-red-500 group-hover:bg-red-500 transition-all duration-300">
-                        <div className="w-0 h-0 border-t-[9px] border-t-transparent border-l-[14px] border-l-white group-hover:border-l-black border-b-[9px] border-b-transparent ml-1"></div>
+                      <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm group-hover:border-red-500 group-hover:bg-red-500 transition-all duration-300">
+                        <div className="w-0 h-0 border-t-[7px] border-t-transparent border-l-[11px] border-l-white group-hover:border-l-black border-b-[7px] border-b-transparent ml-1"></div>
                       </div>
                     </div>
-                    <div className="absolute bottom-3 right-3 bg-black/80 px-2 py-1 text-[10px] font-mono font-bold text-white rounded">
+                    <div className="absolute bottom-2 right-2 bg-black/80 px-1.5 py-0.5 text-[9px] font-mono font-bold text-white rounded">
                       {formatAgo(item.publishedAt)}
                     </div>
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold leading-tight text-white group-hover:text-red-500 transition-colors uppercase">
+                  <h3 className="text-base md:text-lg font-bold leading-tight text-white group-hover:text-red-500 transition-colors uppercase">
                     {item.title}
                   </h3>
                 </a>
@@ -887,11 +894,11 @@
             </div>
           )}
 
-          <div className="mt-24 text-center pb-20 fade-enter-active">
+          <div className="mt-16 text-center pb-16 fade-enter-active">
             <a
               href="https://www.youtube.com/@MindOfHamad/"
               target="_blank"
-              className="inline-block px-10 py-4 bg-black text-white font-black uppercase tracking-widest border border-white/20 hover:bg-red-500 hover:text-black transition-all transform hover:-translate-y-1 text-sm"
+              className="inline-block px-8 py-3 bg-black text-white font-black uppercase tracking-widest border border-white/20 hover:bg-red-500 hover:text-black transition-all transform hover:-translate-y-1 text-xs"
             >
               Subscribe
             </a>
@@ -985,7 +992,7 @@
       return (
         <div
           ref={sectionRef}
-          className="relative min-h-screen w-full bg-[#050505] flex flex-col items-center justify-center overflow-hidden border-t border-white/5"
+          className="relative min-h-[80vh] w-full bg-[#050505] flex flex-col items-center justify-center overflow-hidden border-t border-white/5"
         >
           <canvas
             ref={canvasRef}
@@ -996,17 +1003,17 @@
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_90%_90%_at_50%_50%,transparent_0%,#050505_95%)]"></div>
 
           <div
-            className={`absolute top-16 left-0 w-full text-center transition-all duration-1000 delay-500 ${
+            className={`absolute top-12 left-0 w-full text-center transition-all duration-1000 delay-500 ${
               screenVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
             }`}
           >
-            <p className="text-red-500/50 font-mono text-[10px] tracking-[0.5em] animate-pulse uppercase">
+            <p className="text-red-500/50 font-mono text-[9px] tracking-[0.5em] animate-pulse uppercase">
               SECURE_UPLINK_READY
             </p>
           </div>
 
           <div
-            className={`relative z-10 w-full max-w-7xl px-6 transition-all duration-1000 delay-700 ${
+            className={`relative z-10 w-full max-w-6xl px-6 transition-all duration-1000 delay-700 ${
               screenVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
@@ -1014,9 +1021,9 @@
               <div className="flex justify-center">
                 <button
                   onClick={() => setRevealed(true)}
-                  className="group relative w-40 h-40 md:w-52 md:h-52 rounded-full bg-red-500 text-black flex items-center justify-center transition-all duration-700 hover:scale-110 hover:shadow-[0_0_100px_rgba(239,68,68,0.8)]"
+                  className="group relative w-32 h-32 md:w-44 md:h-44 rounded-full bg-red-500 text-black flex items-center justify-center transition-all duration-700 hover:scale-110 hover:shadow-[0_0_80px_rgba(239,68,68,0.8)]"
                 >
-                  <span className="font-black brand-font text-xs md:text-lg tracking-tight uppercase z-10 group-hover:tracking-normal transition-all duration-500 whitespace-nowrap">
+                  <span className="font-black brand-font text-xs md:text-base tracking-tight uppercase z-10 group-hover:tracking-normal transition-all duration-500 whitespace-nowrap">
                     INITIALIZE
                   </span>
                   <div className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping opacity-20" style={{ animationDuration: '2s' }}></div>
@@ -1024,26 +1031,26 @@
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6 h-full items-center">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-5 h-full items-center">
                 {socialLinks.map((link, i) => (
                   <a
                     key={i}
                     href={link.url}
                     target="_blank"
-                    className="group relative flex flex-col items-center justify-center p-6 md:p-7 border border-white/10 bg-black/40 backdrop-blur-md rounded-2xl hover:border-red-500 hover:bg-red-900/20 transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_0_40px_rgba(239,68,68,0.3)]"
+                    className="group relative flex flex-col items-center justify-center p-5 md:p-6 border border-white/10 bg-black/40 backdrop-blur-md rounded-xl hover:border-red-500 hover:bg-red-900/20 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]"
                     style={{ animation: `fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards ${i * 140}ms` }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-b from-red-500/0 to-red-500/0 group-hover:to-red-500/10 transition-all duration-500 rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-red-500/0 to-red-500/0 group-hover:to-red-500/10 transition-all duration-500 rounded-xl"></div>
 
-                    <div className="relative mb-4 text-white/60 group-hover:text-red-400 transition-colors duration-300 transform group-hover:scale-110">
-                      <link.icon size={36} strokeWidth={1.5} />
+                    <div className="relative mb-3 text-white/60 group-hover:text-red-400 transition-colors duration-300 transform group-hover:scale-110">
+                      <link.icon size={28} strokeWidth={1.5} />
                     </div>
 
-                    <div className="relative flex flex-col items-center gap-2 text-center">
-                      <span className="brand-font font-bold text-sm md:text-base lg:text-lg tracking-wider text-white group-hover:text-red-500 transition-colors whitespace-nowrap">
+                    <div className="relative flex flex-col items-center gap-1 text-center">
+                      <span className="brand-font font-bold text-xs md:text-sm lg:text-base tracking-wider text-white group-hover:text-red-500 transition-colors whitespace-nowrap">
                         {link.name}
                       </span>
-                      <span className="text-[9px] font-mono text-white/50 group-hover:text-red-500/80 tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300 uppercase">
+                      <span className="text-[8px] font-mono text-white/50 group-hover:text-red-500/80 tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300 uppercase">
                         LINK_ESTABLISHED
                       </span>
                     </div>
@@ -1054,11 +1061,11 @@
           </div>
 
           <div
-            className={`absolute bottom-8 text-center w-full transition-opacity duration-1000 delay-1000 ${
+            className={`absolute bottom-6 text-center w-full transition-opacity duration-1000 delay-1000 ${
               screenVisible ? 'opacity-40' : 'opacity-0'
             }`}
           >
-            <p className="text-[10px] font-mono text-red-500/60 uppercase tracking-widest">
+            <p className="text-[9px] font-mono text-red-500/60 uppercase tracking-widest">
               HAMAD ALMHEIRI © 2025
             </p>
           </div>
@@ -1097,28 +1104,28 @@
           <TechBackground />
 
           <nav
-            className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-10 lg:px-12 flex justify-between items-center transition-all duration-500 ease-in-out transform ${
+            className={`fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-10 lg:px-12 flex justify-between items-center transition-all duration-500 ease-in-out transform ${
               isNavVisible ? 'translate-y-0' : '-translate-y-full'
             } ${
               isScrolled
                 ? 'bg-[#050505]/80 backdrop-blur-md border-b border-white/5 py-3'
-                : 'bg-transparent py-6'
+                : 'bg-transparent py-5'
             }`}
           >
             <div
               className="flex flex-col leading-none font-black tracking-tighter brand-font cursor-pointer hover:text-red-500 transition-colors z-50 uppercase mr-4 lg:mr-8 shrink-0"
               onClick={() => setActiveTab('home')}
             >
-              <span className="text-xl md:text-2xl">HAMAD</span>
-              <span className="text-[10px] md:text-xs text-red-500 tracking-[0.3em]">ALMHEIRI</span>
+              <span className="text-lg md:text-xl">HAMAD</span>
+              <span className="text-[9px] md:text-[10px] text-red-500 tracking-[0.3em]">ALMHEIRI</span>
             </div>
 
-            <div className="hidden md:flex items-center gap-6 lg:gap-10">
+            <div className="hidden md:flex items-center gap-5 lg:gap-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`relative text-[11px] lg:text-xs font-bold uppercase transition-all duration-300 whitespace-nowrap ${
+                  className={`relative text-[10px] lg:text-[11px] font-bold uppercase transition-all duration-300 whitespace-nowrap ${
                     item.id === 'company' ? 'tracking-[0.08em]' : 'tracking-[0.14em]'
                   } ${
                     activeTab === item.id ? 'text-red-500' : 'text-white/60 hover:text-white'
@@ -1126,7 +1133,7 @@
                 >
                   {item.label}
                   <span
-                    className={`absolute -bottom-2 left-0 w-full h-[2px] bg-red-500 transform origin-left transition-transform duration-300 ${
+                    className={`absolute -bottom-1.5 left-0 w-full h-[2px] bg-red-500 transform origin-left transition-transform duration-300 ${
                       activeTab === item.id ? 'scale-x-100' : 'scale-x-0'
                     }`}
                   ></span>
@@ -1134,25 +1141,25 @@
               ))}
             </div>
 
-            <button className="hidden md:block px-6 py-2 border border-white/30 hover:border-red-500 hover:bg-red-500 hover:text-black transition-all text-[10px] font-bold uppercase tracking-widest ml-4 lg:ml-auto shrink-0">
+            <button className="hidden md:block px-5 py-1.5 border border-white/30 hover:border-red-500 hover:bg-red-500 hover:text-black transition-all text-[9px] font-bold uppercase tracking-widest ml-4 lg:ml-auto shrink-0">
               Join Network
             </button>
 
             <button
-              className="md:hidden z-50 w-10 h-10 flex items-center justify-center text-white"
+              className="md:hidden z-50 w-8 h-8 flex items-center justify-center text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X /> : <Menu />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </nav>
 
           {isMenuOpen && (
-            <div className="fixed inset-0 bg-black z-40 flex flex-col justify-center px-10 md:hidden">
+            <div className="fixed inset-0 bg-black z-40 flex flex-col justify-center px-8 md:hidden">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`text-5xl font-black text-left py-5 border-b border-white/10 brand-font uppercase ${
+                  className={`text-4xl font-black text-left py-4 border-b border-white/10 brand-font uppercase ${
                     activeTab === item.id ? 'text-red-500' : 'text-white/60'
                   }`}
                 >
@@ -1162,7 +1169,7 @@
             </div>
           )}
 
-          <main className="relative z-10 pb-20">
+          <main className="relative z-10 pb-16">
             {activeTab === 'home' && <Hero setActiveTab={setActiveTab} />}
             {activeTab === 'company' && <Company />}
             {activeTab === 'blog' && <Blog />}
